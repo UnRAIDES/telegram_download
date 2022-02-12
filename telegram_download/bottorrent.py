@@ -174,7 +174,7 @@ async def worker(name):
 			logger.info("RENAME/MOVE [%s] [%s]" % (download_result, final_path) )
 			#create_directory(completed_path)
 			shutil.move(download_result, final_path)
-			os.chmod(final_path, 0o666)
+			os.chmod(final_path, 0o664)
 			if TG_UNZIP_TORRENTS:
 				if zipfile.is_zipfile(final_path):
 					with zipfile.ZipFile(final_path, 'r') as zipObj:
