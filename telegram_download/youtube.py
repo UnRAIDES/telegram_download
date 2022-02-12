@@ -41,7 +41,7 @@ async def youtube_download(url,update,message):
 			res_youtube = ydl.download([url])
 
 			if (res_youtube == False):
-				os.chmod(youtube_path, 0o777)
+				os.chmod(youtube_path, 0o774)
 				filename = os.path.basename(file_name)
 				logger.info(f'DOWNLOADED {total_downloads} VIDEO YOUTUBE [{file_name}] [{youtube_path}][{filename}]')
 				end_time_short = time.strftime('%H:%M', time.localtime())

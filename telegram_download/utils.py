@@ -95,7 +95,7 @@ def getDownloadPath(filename,CID):
 
 	complete_path = os.path.join(download_path,filename)
 	#create_directory(download_path)
-	#os.chmod(download_path, 0o777)
+	#os.chmod(download_path, 0o774)
 	logger.info(f'getDownloadPath getDownloadPath  : {download_path}')
 
 	return download_path, complete_path
