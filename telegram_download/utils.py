@@ -37,6 +37,7 @@ def splash() -> None:
 	''')
 
 
+
 def create_directory(download_path: str) -> None:
 	try:
 		os.makedirs(download_path, exist_ok=True)
